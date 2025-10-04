@@ -24,7 +24,7 @@ class Filters extends BaseFilters
      * [filter_name => classname]
      * or [filter_name => [classname1, classname2, ...]]
      */
-    public array $aliases = [
+        public array $aliases = [
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
@@ -34,7 +34,9 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'auth'          => \App\Filters\AuthFilter::class, 
     ];
+    
 
     /**
      * List of special required filters.
